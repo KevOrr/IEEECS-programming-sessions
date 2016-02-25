@@ -1,0 +1,4 @@
+ACMC ICPC World Finals 2014 Problem A
+Source: https://icpc.baylor.edu/worldfinals/problems/icpc2014.pdf
+
+[See m.jpg]

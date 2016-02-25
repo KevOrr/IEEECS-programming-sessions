@@ -1,0 +1,22 @@
+IEEEXtreme 6.0 Question AA
+
+In a forest, there were 'x' bunnies, 50% male, and 50% female, all adults. Bunnies doubles every 15 days,
+10% of the baby rabbits dies at birth. They mature after 30 days, 30% leave the forest, and rest becomes
+rabbits. In every 30 days , 25% dies off due to flu. If every bunny dies off, the bunny world ends.
+Calculate the final number of bunnies alive after 1 year for any number of initial bunnies, x.
+
+
+Your program should write back to the standard output. When all bunnies die off, write 0 to the standard
+output.
+
+INPUT SAMPLE 1
+444
+
+OUTPUT SAMPLE 1
+0
+
+INPUT SAMPLE 2
+30000
+
+OUTPUT SAMPLE 2
+56854

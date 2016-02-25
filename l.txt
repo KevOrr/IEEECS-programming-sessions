@@ -1,0 +1,29 @@
+IEEEXtreme 6.0 Question AG
+
+We have two tanks that we can fill them with water. We know beforehand the volume of each tank,
+however, there is no other measurement to see how much water there is in each tank. For example, we
+can have a tank of 1lt and one of 3lt, and we can‟t fill the second tank up to 2lt by just looking – we are
+only sure if we already know how much water already exists in one tank and how much water we are
+putting in. What we can do is one of the following three(3) valid moves: A) Empty a tank, B) Fill up a tank
+from a faucet that has unlimited supply, C) Move water to one tank from the other one until the first one
+fills up or the second one to dry, and if there is remaining water, it is kept or thrown away.
+
+You will be given the volume of each of the two tanks, and also the volume of water we want to find, and
+you are asked to answer with the minimum number of moves to be done, according to the description, so
+as to reach the goal, if there is one.
+
+The output will contain just one line containing the minimum number of moves to be done to reach the
+goal, or the word „no‟, in case there is no solution.
+
+
+INPUT SAMPLE 1
+4 5 2
+
+OUTPUT SAMPLE 1
+6
+
+INPUT SAMPLE 2
+4 6 3
+
+OUTPUT SAMPLE 2
+no

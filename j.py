@@ -5,4 +5,4 @@ import sys
 
 nums = map(int, raw_input().split())
 
-print ' '.join(map(str, sorted(nums)))
+print ' '.join(map(str, sorted(nums))) # Is this cheating? xD

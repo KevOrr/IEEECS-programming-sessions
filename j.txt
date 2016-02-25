@@ -1,0 +1,9 @@
+Classic Sorting
+
+Given a list of numbers, sort them from lowest to highest 
+
+INPUT SAMPLE 1
+2 6 10 9 8 5 3
+
+OUTPUT SAMPLE 1
+2 3 5 6 8 9 10
