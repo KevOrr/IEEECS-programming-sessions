@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+# [2016-09-05] Challenge #282 [Easy] Unusual Bases
 # For https://www.reddit.com/r/dailyprogrammer/comments/5196fi/20160905_challenge_282_easy_unusual_bases/
 
 
