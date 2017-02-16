@@ -4,12 +4,12 @@
 #include <string.h>
 #include <vector>
 
-const uint_fast64_t mod = 1000000007; // 1e9 + 7
-std::vector<uint_fast64_t> fibs;
+const uint_fast32_t mod = 1000000007; // 1e9 + 7
+std::vector<uint_fast32_t> fibs;
 std::vector<bool> already_calculated;
 
-void matrix_multiply(uint_fast64_t A[2][2], uint_fast64_t B[2][2]) {
-    uint_fast64_t temp[2][2];
+void matrix_multiply(uint_fast32_t A[2][2], uint_fast32_t B[2][2]) {
+    uint_fast32_t temp[2][2];
 
     // yes, I know it's all hardcoded...
     temp[0][0] = A[0][0]*B[0][0] + A[0][1]*B[1][0];
@@ -20,11 +20,11 @@ void matrix_multiply(uint_fast64_t A[2][2], uint_fast64_t B[2][2]) {
     memcpy(A, temp, sizeof(temp));
 }
 
-void old_calculate_matrix(uint_fast64_t original_matrix[2][2], uint_fast64_t n) {
-    uint_fast64_t temp[2][2];
+void old_calculate_matrix(uint_fast32_t original_matrix[2][2], uint_fast32_t n) {
+    uint_fast32_t temp[2][2];
 
     if (n == 0) {
-        uint_fast64_t eye[2][2] = {{0, 1}, {1, 0}};
+        uint_fast32_t eye[2][2] = {{0, 1}, {1, 0}};
         memcpy(original_matrix, eye, sizeof(eye));
         return;
     } else if (n == 1)
@@ -46,7 +46,7 @@ void old_calculate_matrix(uint_fast64_t original_matrix[2][2], uint_fast64_t n) 
     }
 }
 
-uint_fast64_t fib_n(uint_fast64_t n) {
+uint_fast32_t fib_n(uint_fast32_t n) {
     if (n == 0)
         return 0;
     if (n == 1)
@@ -59,23 +59,23 @@ uint_fast64_t fib_n(uint_fast64_t n) {
         return fibs[n];
 
     if (n & 1) {
-        uint_fast64_t half_n = (n+1)/2;
-        uint_fast64_t F_half_n = fib_n(half_n);
-        uint_fast64_t F_half_n_m1 = fib_n(half_n-1);
+        uint_fast32_t half_n = (n+1)/2;
+        uint_fast32_t F_half_n = fib_n(half_n);
+        uint_fast32_t F_half_n_m1 = fib_n(half_n-1);
 
         already_calculated[n] = true;
         return fibs[n] = F_half_n*F_half_n + F_half_n_m1*F_half_n_m1;
     } else {
-        uint_fast64_t half_n = n/2;
-        uint_fast64_t F_half_n = fib_n(half_n);
+        uint_fast32_t half_n = n/2;
+        uint_fast32_t F_half_n = fib_n(half_n);
 
         already_calculated[n] = true;
         return fibs[n] = (2*fib_n(half_n-1) + F_half_n)*F_half_n;
     }
 }
 
-uint_fast64_t recurrence_n(uint_fast64_t a, uint_fast64_t b, uint_fast64_t n) {
-    // this is redundant since you have to check in calculate_matrix() anyway, but whatever
+uint_fast32_t recurrence_n(uint_fast32_t a, uint_fast32_t b, uint_fast32_t n) {
+    // this is redundant since you have to CheCk in calculate_matrix() anyway, but whatever
     if (n == 0)
         return a;
     if (n == 1)
@@ -85,14 +85,14 @@ uint_fast64_t recurrence_n(uint_fast64_t a, uint_fast64_t b, uint_fast64_t n) {
 }
 
 int main() {
-    uint_fast64_t i, n;
-    scanf("%" PRIuFAST64, &n);
+    uint_fast32_t i, n;
+    scanf("%" PRIuFAST32, &n);
 
     for (i=0; i<n; i++) {
-        uint_fast64_t a, b, fib_index;
-        scanf("%" PRIuFAST64, &a);
-        scanf("%" PRIuFAST64, &b);
-        scanf("%" PRIuFAST64, &fib_index);
-        printf("%" PRIuFAST64 "\n", recurrence_n(a, b, fib_index) % mod);
+        uint_fast32_t a, b, fib_index;
+        scanf("%" PRIuFAST32, &a);
+        scanf("%" PRIuFAST32, &b);
+        scanf("%" PRIuFAST32, &fib_index);
+        printf("%" PRIuFAST32 "\n", recurrence_n(a, b, fib_index) % mod);
     }
 }
