@@ -4,7 +4,7 @@
 #include <string.h>
 #include <vector>
 
-const uint_fast32_t mod = 1000000007; // 1e9 + 7
+const uint_fast32_t MOD = 1000000007; // 1e9 + 7
 std::vector<uint_fast32_t> fibs;
 std::vector<bool> already_calculated;
 
@@ -64,13 +64,14 @@ uint_fast32_t fib_n(uint_fast32_t n) {
         uint_fast32_t F_half_n_m1 = fib_n(half_n-1);
 
         already_calculated[n] = true;
-        return fibs[n] = F_half_n*F_half_n + F_half_n_m1*F_half_n_m1;
+        return fibs[n] = ((F_half_n*F_half_n % MOD) % MOD
+                          + (F_half_n_m1*F_half_n_m1) % MOD) % MOD;
     } else {
         uint_fast32_t half_n = n/2;
         uint_fast32_t F_half_n = fib_n(half_n);
 
         already_calculated[n] = true;
-        return fibs[n] = (2*fib_n(half_n-1) + F_half_n)*F_half_n;
+        return fibs[n] = ((((2*fib_n(half_n-1) % MOD) + F_half_n) % MOD) * F_half_n) % MOD;
     }
 }
 
@@ -93,6 +94,6 @@ int main() {
         scanf("%" PRIuFAST32, &a);
         scanf("%" PRIuFAST32, &b);
         scanf("%" PRIuFAST32, &fib_index);
-        printf("%" PRIuFAST32 "\n", recurrence_n(a, b, fib_index) % mod);
+        printf("%" PRIuFAST32 "\n", recurrence_n(a, b, fib_index));
     }
 }
