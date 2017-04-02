@@ -3,10 +3,10 @@
 import sys
 
 class Board():
-    EXIT = 2
-    EMPTY = 1
-    BLOCKED = 0
-    UNEXPLORED = -1
+    EXIT = 'e'
+    EMPTY = '-'
+    BLOCKED = '#'
+    UNEXPLORED = '?'
     _tile_states = (EXIT, EMPTY, BLOCKED, UNEXPLORED)
 
     def __init__(self, r=30*2+1, c=30*2+1):
