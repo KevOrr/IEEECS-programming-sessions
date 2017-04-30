@@ -9,12 +9,12 @@ languages (20 as of this commit and they're adding support for more). My profile
 
 ### Dailyprogrammer
 Redditors who frequent [r/dailyprogrammer][dailyprogrammer] post daily challenges ranging
-from easy to hard. All languages that [the ideone API][ideone] supports are accepted, and
-even then, languages that ideone does not yet support are more than welcome.
+from easy to hard. All languages that [the ideone API][ideone] supports can be run to verify
+correctness, and even then, languages that ideone does not yet support are more than welcome.
 
 ### HackerRank
-Much like codewars, [HackerRank][hackerrank] is a site that provides challenges rangin from
-"Helloo, World!" to AI and security. My profile is [here][hackerrank profile].
+Much like codewars, [HackerRank][hackerrank] is a site that provides challenges ranging from
+"Hello, World!" to AI and security. My profile is [here][hackerrank profile].
 
 
 
