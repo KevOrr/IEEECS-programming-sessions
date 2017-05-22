@@ -36,3 +36,6 @@
     (loop :for test-case :in test-cases
           :do (destructuring-bind (a b c) test-case
                 (assert (= (xor-mult (xor-mult a b) c) (xor-mult a (xor-mult b c))))))))
+
+(deftype lst (element-type length)
+  `(or null (cons ,element-type (lst ,element-type))))
