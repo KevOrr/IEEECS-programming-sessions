@@ -21,4 +21,4 @@
 (defun main ()
   (loop
     (multiple-value-bind (distance path) (count-kights-moves (read) (read))
-      (format t "~A~{~%~{~A ~}~}~%" distance path))))
+      (format t "~A~{~%~{~A~^ ~}~}~%" distance path))))
