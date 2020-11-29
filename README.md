@@ -1,6 +1,7 @@
-# programming-challenges
+# Programming Challenges
 
-This repository houses all of my solutions to various programming challenge sites
+This repository houses all of my solutions to various programming challenge sites. Can't
+guarantee that all examples will work out-of-the-box, but feel free to open issues.
 
 ### Codewars
 [Codewars][codewars] is a great site for ramping up your programming skills in a variety of
